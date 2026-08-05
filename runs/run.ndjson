@@ -1,0 +1,9 @@
+{"ts":"2026-08-05T09:02:44.192Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"run started","checks":5}
+{"ts":"2026-08-05T09:02:47.433Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"check passed","checkId":"catalogue-grid","ms":3241,"attempts":1}
+{"ts":"2026-08-05T09:02:48.672Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"check passed","checkId":"quote-extraction","ms":1234,"attempts":1}
+{"ts":"2026-08-05T09:02:53.645Z","runId":"2026-08-05T09-02-43-717Z","level":"warn","message":"selector drifted to fallback","selector":"tag-list","tier":2,"matched":".tags","dead":[".tags-v2-container","div[data-tags]"]}
+{"ts":"2026-08-05T09:02:53.666Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"check passed","checkId":"selector-drift","ms":4989,"attempts":1}
+{"ts":"2026-08-05T09:02:56.231Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"check passed","checkId":"login-flow","ms":2559,"attempts":1}
+{"ts":"2026-08-05T09:03:06.233Z","runId":"2026-08-05T09-02-43-717Z","level":"error","message":"selector \"checkout-button\" matched none of 3 candidates","label":"missing-element","attempt":1,"transient":false}
+{"ts":"2026-08-05T09:03:06.278Z","runId":"2026-08-05T09-02-43-717Z","level":"error","message":"check failed, artifacts captured","checkId":"missing-element","url":"https://books.toscrape.com/","pageTitle":"All products | Books to Scrape - Sandbox","screenshot":"artifacts/missing-element.jpg"}
+{"ts":"2026-08-05T09:03:06.476Z","runId":"2026-08-05T09-02-43-717Z","level":"info","message":"run finished","passed":4,"failed":1,"drifted":1,"totalMs":22068}

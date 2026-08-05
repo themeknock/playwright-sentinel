@@ -1,0 +1,138 @@
+{
+  "runId": "2026-08-05T09-02-43-717Z",
+  "finishedAt": "2026-08-05T09:03:06.476Z",
+  "total": 5,
+  "passed": 4,
+  "failed": 1,
+  "drifted": 1,
+  "totalMs": 22068,
+  "results": [
+    {
+      "id": "catalogue-grid",
+      "label": "Book catalogue renders a product grid",
+      "url": "https://books.toscrape.com/",
+      "status": "pass",
+      "ms": 3241,
+      "attempts": 1,
+      "selectors": [
+        {
+          "name": "product-card",
+          "matched": "article.product_pod",
+          "tier": 0,
+          "count": 20,
+          "drift": false,
+          "ms": 16
+        },
+        {
+          "name": "price",
+          "matched": ".price_color",
+          "tier": 0,
+          "count": 20,
+          "drift": false,
+          "ms": 3
+        }
+      ],
+      "data": {
+        "extracted": 20,
+        "sample": "A Light in the Attic"
+      }
+    },
+    {
+      "id": "quote-extraction",
+      "label": "Quotes page yields quote and author pairs",
+      "url": "https://quotes.toscrape.com/",
+      "status": "pass",
+      "ms": 1235,
+      "attempts": 1,
+      "selectors": [
+        {
+          "name": "quote-block",
+          "matched": "div.quote",
+          "tier": 0,
+          "count": 10,
+          "drift": false,
+          "ms": 38
+        }
+      ],
+      "data": {
+        "extracted": 10,
+        "sample": "Albert Einstein"
+      }
+    },
+    {
+      "id": "selector-drift",
+      "label": "Healing selector survives a renamed class",
+      "url": "https://quotes.toscrape.com/",
+      "status": "pass",
+      "ms": 4990,
+      "attempts": 1,
+      "selectors": [
+        {
+          "name": "tag-list",
+          "matched": ".tags",
+          "tier": 2,
+          "count": 10,
+          "drift": true,
+          "ms": 4014
+        }
+      ],
+      "data": {
+        "extracted": 40
+      }
+    },
+    {
+      "id": "login-flow",
+      "label": "Login form submits and lands authenticated",
+      "url": "https://quotes.toscrape.com/login",
+      "status": "pass",
+      "ms": 2560,
+      "attempts": 1,
+      "selectors": [
+        {
+          "name": "username",
+          "matched": "input#username",
+          "tier": 0,
+          "count": 1,
+          "drift": false,
+          "ms": 30
+        },
+        {
+          "name": "password",
+          "matched": "input#password",
+          "tier": 0,
+          "count": 1,
+          "drift": false,
+          "ms": 3
+        }
+      ],
+      "data": {
+        "authenticated": true
+      }
+    },
+    {
+      "id": "missing-element",
+      "label": "Absent element fails loudly with artifacts",
+      "url": "https://books.toscrape.com/",
+      "status": "fail",
+      "ms": 10042,
+      "attempts": 1,
+      "selectors": [
+        {
+          "name": "checkout-button",
+          "matched": null,
+          "tier": -1,
+          "count": 0,
+          "drift": true,
+          "ms": 8003
+        }
+      ],
+      "error": "selector \"checkout-button\" matched none of 3 candidates",
+      "artifacts": {
+        "screenshot": "artifacts/missing-element.jpg",
+        "html": "artifacts/missing-element.html",
+        "url": "https://books.toscrape.com/",
+        "title": "All products | Books to Scrape - Sandbox"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "playwright-sentinel",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A resilience harness for long-lived Playwright automations: healing selectors, backoff, and failure artifacts.",
+  "scripts": {
+    "build": "tsc",
+    "run:checks": "node dist/run.js",
+    "report": "node dist/report.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
